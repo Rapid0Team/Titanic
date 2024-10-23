@@ -1,0 +1,175 @@
+/* Réinitialisation des marges et des paddings de tous les éléments */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Style du corps de la page pour le centrage et l'affichage */
+body {
+    background-image: url();
+    
+	font-family: 'Roboto', sans-serif;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
+}
+
+/* Conteneur principal du formulaire */
+.container {
+    background-color: #fff; 
+    padding: 2.5rem; 
+    border-radius: 15px; 
+    box-shadow: 10px 10px   10px green; 
+    width: 1000%;
+    max-width: 600px; 
+    
+}
+
+/* Style du titre principal */
+h2 {
+    text-align: center; 
+    margin-bottom: 2rem; 
+    color: black; 
+    font-size: 1.8rem;  
+}
+
+h2:hover{
+    letter-spacing: 2px;
+    color: green; 
+    font-size: 2.5rem;  
+    transition: 0.3s ease; /* Transition pour la couleur de fond */
+    cursor: pointer;
+}
+
+/* Chaque ligne du formulaire est une rangée flexible */
+.chaque-form {
+    display: flex; /* Flexbox pour aligner les champs sur une même ligne */
+    justify-content: space-between; /* Espacement entre les éléments */
+    margin-bottom: 1.5rem; /* Espace entre les rangées */
+}
+
+/* Chaque groupe de champ de saisie dans une ligne */
+.les-input {
+    flex-basis: 48%; /* Chaque champ prend 48% de l'espace de la ligne */
+    position: relative; /* Position relative pour faciliter le placement d'éléments */
+}
+
+
+
+/* Style des champs de saisie et de la liste déroulante */
+.les-input input, .les-input select {
+    width: 100%; /* Prend toute la largeur de son conteneur */
+    padding: 0.75rem; /* Espacement interne */
+    font-size: 1rem; /* Taille de la police des champs */
+    border: 1px solid rgb(52, 50, 50); 
+    border-radius: 8px; /* Bords arrondis */
+    transition: border-color 0.3s ease; /* Transition pour les changements de couleur */
+}
+
+/* Changement de la bordure lors du focus sur un champ */
+.les-input input:focus, .les-input select:focus {
+    border-color: green; 
+    outline: none; /* Supprime l'outline par défaut */
+    box-shadow: 2px 2px   5px black; 
+}
+
+/* Groupe de boutons d'action (soumettre et réinitialiser) */
+.button-group {
+    display: flex; /* Flexbox pour aligner les boutons */
+    justify-content: space-between; /* Espace entre les boutons */
+    align-items: center; /* Alignement vertical */
+    margin: 1rem; /* Espace au-dessus des boutons */
+}
+
+/* Style des boutons */
+.button-group button {
+    width: 48%; /* Chaque bouton prend 48% de la largeur disponible */
+    padding: 0.8rem; /* Espacement interne */
+    border: none; /* Supprime la bordure par défaut */
+    border-radius: 8px; /* Bords arrondis */
+    font-size: 1rem; /* Taille de la police */
+    cursor: pointer; /* Curseur pointer pour indiquer l'interactivité */
+    transition: background-color 0.3s ease; /* Transition pour la couleur de fond */
+}
+
+/* Style du bouton de soumission */
+.button-group button[type="submit"] {
+    background-image: url(../image/backgrouand.png);
+    color: white; 
+}
+
+/* Effet hover sur le bouton de soumission */
+.button-group button[type="submit"]:hover {
+    background-color: black; 
+    box-shadow: 5px 5px   10px green; 
+    
+}
+
+/* Style du bouton de réinitialisation */
+.button-group button[type="reset"] {
+    background-color: green; 
+    color: white; 
+}
+
+/* Effet hover sur le bouton de réinitialisation */
+.button-group button[type="reset"]:hover {
+    background-color: black;
+    background-image: url(../image/backgrouand.png);
+    box-shadow: 5px 5px   10px black; 
+}
+
+
+/* pour le message d'ereur  */
+.pEreur{
+    text-align: center;
+    color:red; 
+    background:pink;
+     border:1px solid red;
+      cursor: pointer
+}
+
+
+/* pour link de page se connecter  */
+a{
+    text-align: center;
+    color: green;
+    text-decoration: none;
+    display: block;
+
+
+}
+a:hover{
+
+    letter-spacing: 3px;
+    color: black;
+    transition: 0.3s ease;
+}
+
+/* Styles responsive pour les petits écrans (moins de 768px de large) */
+@media (max-width: 768px) {
+    .chaque-form {
+        flex-direction: column; /* Les champs sont empilés verticalement */
+    }
+
+    .les-input {
+        flex-basis: 100%; /* Chaque champ prend toute la largeur */
+        margin-bottom: 1rem; /* Espacement entre les champs */
+    }
+
+    .button-group {
+        flex-direction: column; /* Les boutons sont empilés verticalement */
+    }
+
+    .button-group button {
+        width: 100%; /* Chaque bouton prend toute la largeur */
+        margin-bottom: 1rem; /* Espace entre les boutons */
+    }
+
+    .button-group button:last-child {
+        margin-bottom: 0; /* Supprime l'espace pour le dernier bouton */
+    }
+}
+

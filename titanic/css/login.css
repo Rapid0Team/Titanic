@@ -1,0 +1,122 @@
+/* EN utilise Descendant Selector pour faire un code simple est facile pour les devloppeur */
+
+
+
+/* qui aplique a toutes */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+}
+
+/* le body  */
+body{
+	background-image: url();
+	font-size: 14px;
+}
+
+/* la class qu contien tous */
+ .content{
+	max-width: 400px;
+	width: 100%;
+	height: auto;
+	margin: 50px auto;
+}
+
+/* qui applique sur la premier div c'est top est ainsi div de signup */
+ .content .top,
+ .signup{
+	background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 15px;
+    padding: 40px;
+}
+
+/* pour image logo de l'entreprise c'est titanic */
+ .content .logo img{
+	display: block;
+	margin: 0 auto 35px;
+    max-width: 200px;
+    border-radius: 1em;
+}
+
+/* pour inseré un espace apres les input for usr */
+ .content .form .input-F-usr{
+    margin-bottom: 15px;
+}
+
+/* pour le style des input 'qui contien la meme class="input" ' */
+ .content .form .input-F-usr .input{
+	width: 100%;
+	background: #fafafa;
+	border: 1px solid #efefef;
+	font-size: 12px;
+	border-radius: 3px;
+	padding: 10px;
+}
+
+
+/* pour click sur input en fait un border */
+ .content .form .input-F-usr .input:focus{
+	border: 1px solid green;
+	box-shadow: 2px 2px   5px black; 
+}
+
+
+/* input de submit */
+ .content .form .btn .se_coneter{
+	margin: 10px auto;
+	background-image: url(../image/backgrouand.png);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 18em;
+    padding: 13px;
+    color: white;
+	display: block;
+}
+
+
+/* pour le message d'ereur  */
+.pEreur{
+    text-align: center;
+    color:red; 
+    background:pink;
+     border:1px solid red;
+      cursor: pointer
+}
+
+
+
+/* la partie de mot passe oblier */
+ .forgot-pas{
+	font-size: 12px;
+	text-align: center;
+	margin-top: 20px;
+}
+ .forgot-pas a{
+	color: black;
+}
+
+.forgot-pas a:hover{
+	letter-spacing: 2px;
+	color: green;
+	transition: 0.3s ease;
+}
+
+/* signup */
+ .signup{
+	margin: 10px 0 20px;
+	padding: 25px 40px;
+	text-align: center;
+	color: #262626;
+}
+
+ .signup a{
+	color: green;
+}
+
+
