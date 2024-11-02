@@ -25,19 +25,31 @@
 				</div>
 				<!-- PHP pour vérifier les informations de connexion -->
 				<?php
-                            if (isset($_POST['submit'])) {
-                                include "connect.php";
-                                extract($_POST);
-                                $query = "SELECT * FROM client WHERE (username = '$user' OR telephone='$user' OR email='$user' OR cin='$user') AND password = '$password'";
-                                $result = mysqli_query($con, $query) or die("Erreur de requête");
-                                if (mysqli_num_rows($result) == 0) {
-                                    echo "<p class='pEreur'>Identifiant ou mot de passe sont incorrect</p>";
-                                } else {
-									
-                                    header("Location: Acce.php");
-                                }
-                            }
-                            ?>
+if (isset($_POST['submit'])) {
+    include "connect.php";
+    extract($_POST);
+
+    // Requête pour vérifier les informations de connexion
+    $query = "SELECT * FROM client WHERE (username = '$user' OR telephone='$user' OR email='$user' OR cin='$user') AND password = '$password'";
+    $result = mysqli_query($con, $query) or die("Erreur de requête");
+
+    if (mysqli_num_rows($result) == 0) {
+        echo "<p class='pErreur' style='color:red; text-align:center;'>Identifiant ou mot de passe sont incorrect</p>";
+    } else {
+        // Récupération des informations de l'utilisateur
+        $userData = mysqli_fetch_assoc($result);
+        
+        // Vérification du rôle
+        if ($userData['role'] === 'admin' ) {
+            header("Location: admin.php"); // Rediriger vers la page d'administration
+        } else {
+            header("Location: Acce.php"); // Rediriger vers la page utilisateur
+        }
+        exit();
+    }
+}
+?>
+
 
               <!-- Bouton pour se connecter -->
 				<div class="btn">

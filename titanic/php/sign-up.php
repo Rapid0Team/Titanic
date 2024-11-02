@@ -93,8 +93,8 @@ if (isset($_POST['submit'])) {
         $age = $currentDateTime->diff($birthDateTime)->y;
 
         // Requête d'insertion
-        $queryInsert = "INSERT INTO client (id_client, nom_complet, username, cin, age, email, telephone, password, genre) 
-                        VALUES (NULL, '$nom_complet', '$username', '$cin', '$age', '$email', '$telephone', '$password', '$genre')";
+        $queryInsert = "INSERT INTO `client`(`id_client`, `nom_complet`, `username`, `cin`, `age`, `email`, `telephone`, `password`, `genre`, `role`)
+                        VALUES (NULL, '$nom_complet', '$username', '$cin', '$age', '$email', '$telephone', '$password', '$genre','user')";
 
         // Exécuter la requête d'insertion
         mysqli_query($con, $queryInsert) or die("Erreur lors de l'insertion des données");

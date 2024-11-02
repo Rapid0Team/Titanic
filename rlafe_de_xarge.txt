@@ -1,0 +1,52 @@
+
+created by belkahla with her team
+
+
+project of Cars
+
+			*titanic*
+if(user =connecter)=> offre -2%
+green and black
+****** user yaxtari
+-~~~~~~home
+
+-infos around site web(video tik tok){-contact}
+-diponible cars or motos wli ga3ma disponible
+-~~~~~~login user ins
+-catalogue bzaf dyal voitures { -detail voitures (acheter & vendre & echange & -demande )(-add cars or motos -add card-recherche with form)}
+
+
+
+
+
+********just buying
+
+*** admin
+-login and update
+-zid kolxi w yan9oss w update
+-ajouter offre
+-tableau de utilisateur(update, ajouter, delete)
+-controller tables cars
+-accepter tomobila maxfoura
+
+** non connecter
+home 
+affichage cars
+demmander cars (il faut connecter pour acheter)
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+	
+
+
+
+
+
+
+
