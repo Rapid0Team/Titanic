@@ -37,13 +37,23 @@ if (isset($_POST['submit'])) {
         echo "<p class='pErreur' style='color:red; text-align:center;'>Identifiant ou mot de passe sont incorrect</p>";
     } else {
         // Récupération des informations de l'utilisateur
-        $userData = mysqli_fetch_assoc($result);
+        $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
         
         // Vérification du rôle
         if ($userData['role'] === 'admin' ) {
-            header("Location: admin.php"); // Rediriger vers la page d'administration
+            header("Location: admin.php");// Rediriger vers la page d'administration
+			session_start();
+			$_SESSION['nom_complet'] = $user['nom_complet'];
+			$_SESSION['username'] = $user['username'];
+			$_SESSION['cin'] = $user['cin'];
+			$_SESSION['age'] = $user['age'];
+			$_SESSION['email'] = $user['email'];
+			$_SESSION['telephone'] = $user['telephone'];
+			$_SESSION['id_client'] = $user['id_client'];
         } else {
-            header("Location: Acce.php"); // Rediriger vers la page utilisateur
+            header("Location: Acce.php");
+			session_start(); // Rediriger vers la page utilisateur
+			$_SESSION['id_client'] = $user['id_client'];
         }
         exit();
     }
