@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url("../image/backgrouand.png");
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    text-align: center;
+}
+.container h1{
+    margin-bottom: 2em;
+
+}
+.table{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.table table{
+    width: 70%;
+    margin-top: 2em;
+    border: 5px solid green;
+    border-collapse: collapse;
+    background-color: black;
+}
+.table table tr th, td{
+    padding: 1em 2em;
+    border: 5px solid green;
+}
+
+.table table tr th{
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+}
+
+
+.view{
+    text-decoration: none;
+    color: rgb(0, 110, 255);
+    background-color: aqua;
+    border-radius: 20px;
+    padding: 8px 10px;
+    font-weight: 700;
+    transition: .3s ease;
+}
+.view:hover{
+    text-decoration: none;
+    color: aqua;
+    background-color: rgb(0, 110, 255);
+    border-radius: 20px;
+    padding: 8px 10px;
+    font-weight: 700;
+}
+
+.edit{
+    text-decoration: none;
+    color: rgb(101, 91, 14);
+    background-color: rgb(255, 217, 0);
+    border-radius: 20px;
+    padding: 8px 10px;
+    font-weight: 700;
+    transition: .3s ease;
+}
+.edit:hover{
+    text-decoration: none;
+    color: rgb(255, 217, 0);
+    background-color: rgb(101, 91, 14);
+    border-radius: 20px;
+    padding: 8px 10px;
+    font-weight: 700;
+}
+
+.delete{
+    text-decoration: none;
+    color: rgb(143, 11, 11);
+    background-color: rgb(255, 0, 0);
+    border-radius: 20px;
+    padding: 8px 10px;
+    font-weight: 700;
+    transition: .3s ease;
+}
+.delete:hover{
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+    background-color: rgb(143, 11, 11);
+    border-radius: 20px;
+    padding: 8px 10px;
+    font-weight: 700;
+}

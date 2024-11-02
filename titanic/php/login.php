@@ -37,10 +37,10 @@ if (isset($_POST['submit'])) {
         echo "<p class='pErreur' style='color:red; text-align:center;'>Identifiant ou mot de passe sont incorrect</p>";
     } else {
         // Récupération des informations de l'utilisateur
-        $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        $user = mysqli_fetch_assoc($result);
         
         // Vérification du rôle
-        if ($userData['role'] === 'admin' ) {
+        if ($user['role'] === 'admin' ) {
             header("Location: admin.php");// Rediriger vers la page d'administration
 			session_start();
 			$_SESSION['nom_complet'] = $user['nom_complet'];

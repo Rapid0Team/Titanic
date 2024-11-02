@@ -6,6 +6,7 @@
     <title>Formulaire Inscription</title>
     <!-- Lien vers le fichier CSS externe pour le style -->
     <link rel="stylesheet" href="../css/sign-up.css">
+    
 </head>
 <body>
     <!-- Conteneur principal du formulaire -->
@@ -88,9 +89,16 @@ if (isset($_POST['submit'])) {
     echo "<p class='pEreur'>Ce numéro telephone est déjà utilisé.</p>";
     }else {
         // Calculer l'âge à partir de la date de naissance
-        $birthDateTime = new DateTime($birthdate);
-        $currentDateTime = new DateTime();
-        $age = $currentDateTime->diff($birthDateTime)->y;
+            // Calculer l'âge à partir de la date de naissance
+            try {
+                $birthDateTime = new DateTime($birthdate);
+                $currentDateTime = new DateTime();
+                $age = $currentDateTime->diff($birthDateTime)->y;
+            } catch (Exception $e) {
+                echo "<p class='pEreur'>Erreur lors du calcul de l'âge.</p>";
+                exit;
+            }
+        
 
         // Requête d'insertion
         $queryInsert = "INSERT INTO `client`(`id_client`, `nom_complet`, `username`, `cin`, `age`, `email`, `telephone`, `password`, `genre`, `role`)
