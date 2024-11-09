@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
         
         // Vérification du rôle
         if ($user['role'] === 'admin' ) {
-            header("Location: tableUsers.php");// Rediriger vers la page d'administration
+            header("Location: admin.php");// Rediriger vers la page d'administration
 			session_start();
 			$_SESSION['nom_complet'] = $user['nom_complet'];
 			$_SESSION['username'] = $user['username'];
