@@ -44,8 +44,8 @@ body{
 
 .view{
     text-decoration: none;
-    color: rgb(0, 110, 255);
-    background-color: aqua;
+    color: greenyellow;
+    background-color: green;
     border-radius: 20px;
     padding: 8px 10px;
     font-weight: 700;
@@ -62,8 +62,8 @@ body{
 
 .edit{
     text-decoration: none;
-    color: rgb(101, 91, 14);
-    background-color: rgb(255, 217, 0);
+    color: greenyellow;
+    background-color: green;
     border-radius: 20px;
     padding: 8px 10px;
     font-weight: 700;
@@ -72,7 +72,7 @@ body{
 .edit:hover{
     text-decoration: none;
     color: rgb(255, 217, 0);
-    background-color: rgb(101, 91, 14);
+    background-color: rgb(159, 142, 10);
     border-radius: 20px;
     padding: 8px 10px;
     font-weight: 700;
@@ -80,8 +80,8 @@ body{
 
 .delete{
     text-decoration: none;
-    color: rgb(143, 11, 11);
-    background-color: rgb(255, 0, 0);
+    color: greenyellow;
+    background-color: green;
     border-radius: 20px;
     padding: 8px 10px;
     font-weight: 700;

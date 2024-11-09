@@ -24,7 +24,7 @@ if(isset($_GET['id'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/tableUsers.css">
+    <link rel="stylesheet" href="../css/tableUserse.css">
 </head>
 
 <body>
@@ -51,7 +51,7 @@ if(isset($_GET['id'])){
                         <td>
                             <a href="viewUser.php?id=<?= $user['id_client']?>" class="view">View</a>
                             <a href="editUser.php?id=<?= $user['id_client']?>" class="edit">Edit</a>
-                            <a href="tableUsers.php?id=<?= $user['id_client']?>" class="delete" onclick="return confirm('fuck')" delete>Delete</a>
+                            <a href="tableUsers.php?id=<?= $user['id_client']?>" class="delete" onclick="return confirm('Tu es sûr ?')" delete>Delete</a>
                         </td>
                     </tr>
                 <?php endforeach ?>

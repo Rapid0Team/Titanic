@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background-color: white;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+}
+
+.form{
+    background-color: rgb(17, 131, 17);
+    width: auto;
+    padding: 1em 2em;
+    border-radius: 2em;
+
+}
+
+h3{
+    color: black;
+}
+
+label{
+    font-size: 13px;
+}
+.infos{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 1em 0;
+}
+
+.info{
+    width: 30%;
+}
+
+.info input, select, textarea{
+    width: 100%;
+    height: 25px;
+    border-radius: 10px;
+    padding: 0 1em;
+}
+
+.btn{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn input{
+    padding: 10px 20px;
+    border-radius: 2em;
+    transition: .6s ease;
+}
+
+
+.btn input:hover{
+    padding: 10px 20px;
+    border-radius: 2em;
+    background-image: url("../image/backgrouand.png");
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+
+@media screen and (max-width:500px) {
+    .infos{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 10px 0;
+    }
+    .info{
+        width: 100%;
+    }
+
+    .info input, select, textarea{
+        width: 100%;
+        height: 25px;
+        border-radius: 10px;
+        padding: 0 1em;
+    }
+    
+}
