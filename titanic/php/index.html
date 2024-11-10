@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoLocate Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+</head>
+
+<body class="bg-white-300">
+
+    <div class="nav w-full p-2 bg-black text-white flex fixed justify-between top-0 z-10">
+        <img src="../image/logo.jpg" alt="logo" class="w-32 rounded-3xl h-16">
+        <ul class="flex about gap-7 text-xl p-4">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#Contact">Contact Us</a></li>
+            <li><a href="#">Products</a></li>
+        </ul>
+        <div class="btn p-2">
+            <button class="bg-slate-800 text-white rounded-3xl p-2 w-20 m-2 hover:bg-green-500"><a href="Titanic/titanic/php/sign-up.php">Sign up</a></button>
+            <button class="bg-slate-800 text-white rounded-3xl p-2 w-20 hover:bg-green-500"><a href="Titanic/titanic/php/login.php">Log in</a></button>
+        </div>
+    </div>
+
+    <div id="carousel" class="splide mt-24">
+        <div class="splide__track">
+            <ul class="splide__list gap-3">
+                <li class="splide__slide"><img src="../image/dacia.jpg" alt="Slide 1"></li>
+                <li class="splide__slide"><img src="../image/fiat.jpg" alt="Slide 2"></li>
+                <li class="splide__slide"><img src="../image/BMW-logo-meaning.webp" alt="Slide 3"></li>
+                <li class="splide__slide"><img src="../image/Mercedes-Benz-Logo.png" alt="Slide 2"></li>
+                <li class="splide__slide"><img src="../image/peugeot.jfif" alt="Slide 3"></li>
+                <li class="splide__slide"><img src="../image/renault.jpg" alt="Slide 3"></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <section class="about-us grid place-items-center justify-center mb-16 mt-16 w-full">
+        <!-- <div class="flex flex-col mt-4 w-4/12"> -->
+        <h1 class="text-4xl font-bold text-lime-600">Titanc Auto</h1>
+        <!-- <img src="logo.jpg" class=" my-4 w-12/12 m-20 rounded-full" alt=""> -->
+        <!-- </div> -->
+        <p class="mt-10 w-6/12 text-2xl ">
+            <span class="text-green-600 text-3xl autolocate">Titanic Auto</span> makes car shopping simple and
+            efficient. We connect you with a wide selection of vehicles, offering advanced search tools and personalized
+            recommendations. <br />
+            Our mission is to provide a seamless, transparent, and reliable experience for every buyer. Trust AutoLocate
+            PRO to help you find your perfect car, hassle-free.
+
+
+        </p>
+
+    </section>
+    <section id="Contact" class="bg-gray-100 py-12">
+        <div class="max-w-4xl mx-auto p-6 bg-green-500 shadow-lg rounded-lg">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Contact Us</h2>
+            <form action="#" method="POST" class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="name" class="block text-white  font-semibold mb-1">Full Name</label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-lime-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-white font-semibold mb-1">Email Address</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-lime-500">
+                    </div>
+                </div>
+                <div>
+                    <label for="subject" class="block text-white  font-semibold mb-1">Subject</label>
+                    <input type="text" id="subject" name="subject" required
+                        class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-lime-500">
+                </div>
+                <div>
+                    <label for="message" class="block text-white font-semibold mb-1">Message</label>
+                    <textarea id="message" name="message" rows="4" required
+                        class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-lime-500"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit"
+                        class="bg-lime-500 text-white font-semibold py-2 px-6 rounded-md hover:bg-lime-400 hover:text-black focus:outline-none">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <div class="footer text-white pt-5 flex gap-10 justify-center bg-black h-16 mt-10">
+        <h4>AutoLocate PRO | All Rights Reserved</h4>
+        <h5>Contact Us: <a class="text-blue-400" href="mailto:info@autolocatepro.com">info@titanicAuto.com</a></h5>
+        <h5>Terms of Service | Privacy Policy</h5>
+        <h5>Copyright 2024 &copy;</h5>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('#carousel', {
+                type: 'loop', // or 'slide'
+                perPage: 3,   // Number of slides visible
+                autoplay: true, // Auto-play slides
+                interval: 3000, // Time between slides (in ms)
+            }).mount();
+        });
+    </script>
+</body>
+
+</html>

@@ -171,7 +171,7 @@ if (isset($_POST['submit'])) {
         </form>
     </div>
     <a href="tableUsers.php"><button class="toggle-form-button" >Tablaux Users</button></a>
-    <a href="addCar.php"><button class="toggle-form-button" >Tablaux Cars</button></a>
+    <a href="tableCars.php"><button class="toggle-form-button" >Tablaux Cars</button></a>
 
     </div>
         <script>
