@@ -1,21 +1,33 @@
 <?php
-    $id = $_GET['id'];
-    include "connect.php";
-    $query = "SELECT * from client where id_client = $id";
-    $result = mysqli_query($con, $query);
-    $user = mysqli_fetch_assoc($result);
+$id = $_GET['id'];
+include "connect.php";
+$query = "SELECT * from client where id_client = $id";
+$result = mysqli_query($con, $query);
+$user = mysqli_fetch_assoc($result);
 
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/viewUser.css">
+    <link rel="stylesheet" href="../css/view.css">
+    <style>
+        .container .item {
+            background-image: url('../image/backgrouand.png');
+            padding: 1em;
+            width: 500px;
+            height: auto;
+            border-radius: 2em;
+            box-shadow: 0px 0px 30px green;
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
 
@@ -57,4 +69,5 @@
         </div>
     </div>
 </body>
+
 </html>

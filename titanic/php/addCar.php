@@ -1,16 +1,24 @@
-<?php 
-    include "connect.php";
-    if(isset($_POST['submit'])){
-        extract($_POST);
+<?php
+include "connect.php";
+$message = "";
+if (isset($_POST['submit'])) {
+    extract($_POST);
+    $checkVIN = "SELECT * from cars where vin = '$vin'";
+    $result = mysqli_query($con, $checkVIN);
+
+    if (mysqli_num_rows($result) > 0) {
+        $message = "VIN est déjà existe !";
+    } else {
         $source = $_FILES['photo']['tmp_name'];
-        $destination = '../photosCars/'.$_FILES['photo']['name'];
+        $destination = '../photosCars/' . $_FILES['photo']['name'];
         move_uploaded_file($source, $destination);
-        $query = "INSERT INTO `cars`(`id_cars`, `marque`, `model`, `annee`, `vin`, `type_moteur`, `transmission`, `couleur`, `kilometre`, `nom_proprietaire`, `numero_plaque`, `etat_region`, `statut_actuel`, `Commentaires_Notes`, `photo`) 
-                  VALUES (null, '$marque', '$model', '$annee', '$vin', '$type', '$transmission', '$couleur', '$kilometre', '$nom_proprietaire', '$numero_plaque', '$etat_region', '$statut_actuel', '$Commentaires_Notes', '$destination')
+        $query = "INSERT INTO `cars`(`id_cars`, `marque`, `model`, `annee`, `vin`, `prix`, `type_moteur`, `transmission`, `couleur`, `kilometre`, `nom_proprietaire`, `numero_plaque`, `etat_region`, `statut_actuel`, `Commentaires_Notes`, `photo`) 
+                  VALUES (null, '$marque', '$model', '$annee', '$vin', '$prix', '$type', '$transmission', '$couleur', '$kilometre', '$nom_proprietaire', '$numero_plaque', '$etat_region', '$statut_actuel', '$Commentaires_Notes', '$destination')
                   ";
         mysqli_query($con, $query);
-        header('location:admin.html');
+        header('location:tableCars.php');
     }
+}
 ?>
 
 
@@ -22,6 +30,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/addCar.css">
+    <style>
+        .a{
+            text-align: center;
+            margin-top: 2em;
+        }
+        .a a{
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #fff;
+            background-color: green;
+            padding: 10px 20px;
+            border-radius: 2em;
+            transition: .6s ease;
+        }
+        .a a:hover{
+            text-decoration: none;
+            color: green;
+            border: 1px solid green;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 2em;
+        }
+    </style>
 </head>
 
 <body>
@@ -49,6 +80,15 @@
                     <div class="info">
                         <label for="vin">VIN :</label>
                         <input type="text" name="vin" id="vin" placeholder="Numéro d’identification du véhicule...">
+                        <p style='color:red; text-align:center; background-color: pink;'><?= $message; ?></p>
+                        
+                    </div>
+                </div>
+
+                <div class="infos">
+                    <div class="info">
+                        <label for="prix">Prix :</label>
+                        <input type="number" name="prix" id="prix">
                     </div>
                 </div>
 
@@ -56,7 +96,7 @@
                 <div class="infos">
                     <div class="info">
                         <select name="type" id="type">
-                            <option value="ne pas selecter" selected>Type de moteur</option>
+                            <option value="ne pas sélectionner" selected>Type de moteur</option>
                             <option value="diesel">Diesel</option>
                             <option value="essence">Essence</option>
                             <option value="electrique">Électrique</option>
@@ -65,7 +105,7 @@
                     </div>
                     <div class="info">
                         <select name="transmission" id="transmission">
-                            <option value="ne pas selecter" selected>Transmission</option>
+                            <option value="ne pas sélectionner" selected>Transmission</option>
                             <option value="manuelle">Manuelle</option>
                             <option value="automatique">Automatique</option>
                             <option value="CVT">CVT</option>
@@ -103,7 +143,7 @@
                     </div>
                     <div class="info">
                         <select name="statut_actuel" id="statut_actuel">
-                            <option value="ne pas selecter" selected>Statut actuel</option>
+                            <option value="ne pas sélectionner" selected>Statut actuel</option>
                             <option value="Disponible">Disponible</option>
                             <option value="En_attente">En attente</option>
                             <option value="Reserve">Réservé</option>
@@ -129,6 +169,9 @@
 
                 <div class="btn">
                     <input type="submit" name="submit" value="Ajouter">
+                </div>
+                <div class="a">
+                    <a href="tableCars.php">Revenir</a>
                 </div>
             </form>
         </div>
