@@ -59,8 +59,6 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-
-
               <!-- Bouton pour se connecter -->
 				<div class="btn">
                     <input type="submit" name="submit" class="se_coneter" value="Se Connecter">
