@@ -8,7 +8,9 @@
 
 /* Style du corps de la page pour le centrage et l'affichage */
 body {
-    background-image: url();
+    background-image: url("../image/logo.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
     
 	font-family: 'Roboto', sans-serif;
     display: flex; 
