@@ -100,7 +100,7 @@ if (isset($_POST['submit'])) {
         <input type="text" name="new_nom_admin" placeholder="Nouveau nom d'utilisateur"><br>
         <input type="password" name="new_password" placeholder="Nouveau mot de passe"><br>
         <input type="submit" name="submit" value="Mettre à jour">
-        <a href="tableUsers.php"><input type="button" value="Annuler"></a>
+        <a href="admin2.php"><input type="button" value="Annuler"></a>
         <?php echo "<div class='error'>$message</div>"; ?>
     </form>
 </body>
