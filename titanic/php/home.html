@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoLocate Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+</head>
+
+<body class="bg-white-300">
+
+<div class="nav sm:w-full w-full p-2 bg-black text-white flex fixed justify-between items-center top-0 z-10">
+    <img src="../image/logo.jpg" alt="logo" class="w-32 rounded-3xl h-16">
+    <ul class="hidden md:flex gap-7 about text-xl">
+        <li><a href="#" >About</a></li>
+        <li><a href="#" >Help</a></li>
+        <li><a href="#Contact" >Contact Us</a></li>
+        <li><a href="#">Products</a></li>
+    </ul>
+    <div class="hidden md:flex items-center space-x-2">
+        <button class="bg-slate-800 text-white rounded-full px-4 py-1 hover:bg-slate-700">
+            <a href="sign-up.php">Sign up</a>
+        </button>
+        <button class="bg-slate-800 text-white rounded-full px-4 py-1 hover:bg-slate-700">
+            <a href="login.php">Log in</a>
+        </button>
+    </div>
+    <div class="md:hidden cursor-pointer" onclick="showSide()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+        </svg>
+    </div>
+</div>
+
+<div class="sidebar pb-52">
+    <div class="">
+
+        <img src="../image/logo.jpg" alt="logo" class="w-56 dnone rounded-3xl h-32">
+    </div>
+    <ul class="pt-4 grid place text-white w-full">
+        <li class="pl-5 absolute top-0 right-0" onclick="hideSide()">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#e8eaed">
+                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg>
+            </a>
+        </li>
+        
+        <li class="mt-4 w-full p-3 rounded-lg  text-xl text-center hover:bg-gray-600"><a href="#">About</a></li>
+        <li class="mt-4 p-3 rounded-lg  text-xl hover:bg-gray-600"><a class="w-full" href="#">Help</a></li>
+        <li class="mt-4 p-3 rounded-lg  text-xl hover:bg-gray-600"><a href="#Contact">Contact Us</a></li>
+        <li class="mt-4 p-3 rounded-lg  text-xl hover:bg-gray-600"><a href="#">Products</a></li>
+        <div class=" botn  absolute bottom-0 ml-4 sup">
+            <li class="mt-4 pl-5 pr-5 pt-2 pb-2 rounded-full text-xl border-white border-2 hover:text-black hover:bg-gray-300"><a class="text-2xl font-bold" href="sign-up.php">Sign up</a></li>
+        <li class="mt-4 pl-5 text-xl pl-5 pr-5 pt-2 pb-2 rounded-full border-white bg-white text-black  border-2 hover:bg-black hover:text-white"><a href="login.php" class="text-2xl font-bold">Log in</a></li>
+    
+        </div>
+        </ul>
+</div>
+
+<script>
+    function showSide(){
+        let sidebar = document.querySelector('.sidebar')
+        sidebar.style.display="flex"
+    }
+    function hideSide(){
+        let sidebar = document.querySelector('.sidebar')
+        sidebar.style.display="none"
+    }
+</script>
+
+    <div id="carousel" class="splide mt-24">
+        <div class="splide__track">
+            <ul class="splide__list gap-3">
+                <li class="splide__slide"><img src="../image/dacia.jpg" alt="Slide 1"></li>
+                <li class="splide__slide"><img src="../image/fiat.jpg" alt="Slide 2"></li>
+                <li class="splide__slide"><img src="../image/BMW-logo-meaning.webp" alt="Slide 3"></li>
+                <li class="splide__slide"><img src="../image/Mercedes-Benz-Logo.png" alt="Slide 2"></li>
+                <li class="splide__slide"><img src="../image/peugeot.jfif" alt="Slide 3"></li>
+                <li class="splide__slide"><img src="../image/renault.jpg" alt="Slide 3"></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <section class="about-us grid place-items-center justify-center mb-16 mt-16 w-full">
+        <!-- <div class="flex flex-col mt-4 w-4/12"> -->
+        <h1 class="text-4xl font-bold text-lime-600">Titanc Auto</h1>
+        <!-- <img src="logo.jpg" class=" my-4 w-12/12 m-20 rounded-full" alt=""> -->
+        <!-- </div> -->
+        <p class="mt-10 w-6/12 text-2xl ">
+            <span class="text-green-600 text-3xl autolocate">Titanic Auto</span> makes car shopping simple and
+            efficient. We connect you with a wide selection of vehicles, offering advanced search tools and personalized
+            recommendations. <br />
+            Our mission is to provide a seamless, transparent, and reliable experience for every buyer. Trust AutoLocate
+            PRO to help you find your perfect car, hassle-free.
+
+
+        </p>
+
+    </section>
+    <section id="Contact" class=" bg-gray-100 py-12">
+        <div class="max-w-4xl form mx-auto p-6 bg-white shadow-lg rounded-lg">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Contact Us</h2>
+            <form action="https://api.web3forms.com/submit" method="POST" class="form rounded-xl space-y-4">
+            <input type="hidden" name="access_key" value="e808e3db-c373-4ca1-8e4a-e135713ae0ae">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="name" class="block text-black  font-semibold mb-1">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="nom et prenom"
+                            class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-lime-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-black font-semibold mb-1">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="adresse email"
+                            class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-lime-500">
+                    </div>
+                </div>
+                <div>
+                    <label for="subject" class="block text-black  font-semibold mb-1">Subject</label>
+                    <input type="text" id="subject" name="subject" required placeholder="sujet"
+                        class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-lime-500">
+                </div>
+                <div>
+                    <label for="message" class="block text-black font-semibold mb-1">Message</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="entrer votre message ici"
+                        class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-lime-500"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit"
+                        class="bg-white text-gray-400 font-semibold py-2 px-6 btn rounded-md mb-4 hover:text-green-500 focus:outline-none">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+<div class="footer text-white pt-5 bg-black mt-10">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row md:justify-between items-center gap-4 md:gap-10 text-center md:text-left">
+            <h4 class="text-sm md:text-base">AutoLocate PRO | All Rights Reserved</h4>
+            <h5 class="text-sm md:text-base">
+                Contact Us: <a class="text-blue-400" href="mailto:info@autolocatepro.com">info@titanicAuto.com</a>
+            </h5>
+            <h5 class="text-sm md:text-base">Terms of Service | Privacy Policy</h5>
+            <h5 class="text-sm md:text-base">Copyright 2024 &copy;</h5>
+        </div>
+    </div>
+</div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('#carousel', {
+                type: 'loop', // or 'slide'
+                perPage: 3,   // Number of slides visible
+                autoplay: true, // Auto-play slides
+                interval: 3000, // Time between slides (in ms)
+            }).mount();
+        });
+    </script>
+</body>
+
+</html>
