@@ -52,8 +52,8 @@ if(isset($_POST['submit'])){
         }
     </style>
 </head>
-
 <body>
+
     <!-- Conteneur principal du formulaire -->
     <div class="container">
         <h1>Utilisateur n°<?= $user['id_client'] ?></h1>

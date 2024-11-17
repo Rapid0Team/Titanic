@@ -26,7 +26,7 @@ if(isset($_GET['id'])){
     <title>Document</title>
     <link rel="stylesheet" href="../css/tableUserse.css">
 </head>
-
+    
 <body>
     <div class="container">
         <h1>Tableau d'utilisateurs</h1>

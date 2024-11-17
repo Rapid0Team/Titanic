@@ -149,6 +149,7 @@ if (isset($_POST['submit'])) {
     </style>
 </head>
 <body>
+
     <div class="tfo">
         <!-- Bouton pour afficher/masquer le formulaire en haut de la page -->
     <button class="toggle-form-button" onclick="toggleForm()">Ajouter Des Informations Personnel</button>

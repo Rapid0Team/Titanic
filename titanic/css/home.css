@@ -1,21 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*{
+  scroll-behavior: smooth;
+  transition: 0.4s;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
-.btn button:hover{
-    background-color: green;
-    color: white;
-}
-.about  a:hover{
-    color: lime;
-    text-shadow: 2px 2px 5px black;
-}
-.about a{
-    font-family: "sour gummy";
 
-}
 
 
 .autolocate{
@@ -39,84 +32,3 @@
 .btn {
   transition: 0.5s;
 }
-ul li a{
-height: 100%;
-/* padding: 0 30%; */
-text-decoration: none;
-display: flex;
-align-items: center;
-color: bla;
-
-}
-.sidebar{
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 250px;
-  /* backdrop-filter: blur(); */
-  z-index: 999;
-  background-color: rgb(0, 0, 0);
-  display: none;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-@media (max-width: 800px) {
-  .hideOnMobile {
-    display: flex;
-  }
-  .sup {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: static;
-    margin-bottom: 20px;
-    align-items: center;
-  }
-  .sup li {
-    width: 80%; /* Adjust the width for better fit on smaller screens */
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  .botn{
-    width: 65%;
-    position: absolute;
-    right:0 ;
-  }
-  .dnone{
-    display: none;
-  }
-}
-
-@media (max-width: 400px) {
-  .sidebar {
-    width: 100%;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
-    padding: 10px;
-    display: grid;place-content: center
-    ;
-  }
-  
-
-  .sup {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .sup li {
-    width: 80%; 
-    text-align: center;
-    margin-bottom: 8px;
-  }
-  .dnone{
-    display: flex;
-    
-  }
-}
-

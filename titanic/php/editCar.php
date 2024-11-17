@@ -74,8 +74,8 @@ if(isset($_POST['submit'])){
         }
     </style>
 </head>
-
 <body>
+
     <div class="container">
         <div class="form">
             <h1>Ajouter Voitures</h1>

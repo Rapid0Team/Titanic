@@ -41,6 +41,7 @@ if(isset($_GET['id'])){
 </head>
 
 <body>
+
     <div class="container">
         <h1>Tableau de voitures</h1>
         <div class="btn">

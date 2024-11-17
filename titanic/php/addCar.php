@@ -54,7 +54,6 @@ if (isset($_POST['submit'])) {
         }
     </style>
 </head>
-
 <body>
     <div class="container">
         <div class="form">

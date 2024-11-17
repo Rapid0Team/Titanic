@@ -9,6 +9,7 @@
     
 </head>
 <body>
+
     <!-- Conteneur principal du formulaire -->
     <div class="container">
         <h2>Inscription Utilisateur</h2>

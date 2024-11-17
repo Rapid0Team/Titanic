@@ -13,65 +13,9 @@
 
 <body class="bg-white-300">
 
-<div class="nav sm:w-full w-full p-2 bg-black text-white flex fixed justify-between items-center top-0 z-10">
-    <img src="../image/logo.jpg" alt="logo" class="w-32 rounded-3xl h-16">
-    <ul class="hidden md:flex gap-7 about text-xl">
-        <li><a href="#" >About</a></li>
-        <li><a href="#" >Help</a></li>
-        <li><a href="#Contact" >Contact Us</a></li>
-        <li><a href="#">Products</a></li>
-    </ul>
-    <div class="hidden md:flex items-center space-x-2">
-        <button class="bg-slate-800 text-white rounded-full px-4 py-1 hover:bg-slate-700">
-            <a href="sign-up.php">Sign up</a>
-        </button>
-        <button class="bg-slate-800 text-white rounded-full px-4 py-1 hover:bg-slate-700">
-            <a href="login.php">Log in</a>
-        </button>
-    </div>
-    <div class="md:hidden cursor-pointer" onclick="showSide()">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
-        </svg>
-    </div>
-</div>
-
-<div class="sidebar pb-52">
-    <div class="">
-
-        <img src="../image/logo.jpg" alt="logo" class="w-56 dnone rounded-3xl h-32">
-    </div>
-    <ul class="pt-4 grid place text-white w-full">
-        <li class="pl-5 absolute top-0 right-0" onclick="hideSide()">
-            <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#e8eaed">
-                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
-                </svg>
-            </a>
-        </li>
-        
-        <li class="mt-4 w-full p-3 rounded-lg  text-xl text-center hover:bg-gray-600"><a href="#">About</a></li>
-        <li class="mt-4 p-3 rounded-lg  text-xl hover:bg-gray-600"><a class="w-full" href="#">Help</a></li>
-        <li class="mt-4 p-3 rounded-lg  text-xl hover:bg-gray-600"><a href="#Contact">Contact Us</a></li>
-        <li class="mt-4 p-3 rounded-lg  text-xl hover:bg-gray-600"><a href="#">Products</a></li>
-        <div class=" botn  absolute bottom-0 ml-4 sup">
-            <li class="mt-4 pl-5 pr-5 pt-2 pb-2 rounded-full text-xl border-white border-2 hover:text-black hover:bg-gray-300"><a class="text-2xl font-bold" href="sign-up.php">Sign up</a></li>
-        <li class="mt-4 pl-5 text-xl pl-5 pr-5 pt-2 pb-2 rounded-full border-white bg-white text-black  border-2 hover:bg-black hover:text-white"><a href="login.php" class="text-2xl font-bold">Log in</a></li>
-    
-        </div>
-        </ul>
-</div>
-
-<script>
-    function showSide(){
-        let sidebar = document.querySelector('.sidebar')
-        sidebar.style.display="flex"
-    }
-    function hideSide(){
-        let sidebar = document.querySelector('.sidebar')
-        sidebar.style.display="none"
-    }
-</script>
+ <?php
+    include "nav.php"
+ ?>
 
     <div id="carousel" class="splide mt-24">
         <div class="splide__track">
@@ -87,7 +31,7 @@
     </div>
 
 
-    <section class="about-us grid place-items-center justify-center mb-16 mt-16 w-full">
+    <section id="help" class="about-us grid place-items-center  justify-center mb-16 mt-16 w-full">
         <!-- <div class="flex flex-col mt-4 w-4/12"> -->
         <h1 class="text-4xl font-bold text-lime-600">Titanc Auto</h1>
         <!-- <img src="logo.jpg" class=" my-4 w-12/12 m-20 rounded-full" alt=""> -->
@@ -140,7 +84,7 @@
         </div>
     </section>
 
-<div class="footer text-white pt-5 bg-black mt-10">
+<div class="footer text-white p-3 bg-black mt-10">
     <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row md:justify-between items-center gap-4 md:gap-10 text-center md:text-left">
             <h4 class="text-sm md:text-base">AutoLocate PRO | All Rights Reserved</h4>

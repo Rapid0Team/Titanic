@@ -1,3 +1,6 @@
+    <?php
+    include "nav.php"
+    ?>
 <?php 
     include 'connect.php';
     $query = "SELECT * from cars";
@@ -14,7 +17,6 @@
     <link rel="stylesheet" href="../css/infos.css">
 </head>
 <body>
-
 <header>
     <h1>Magasin de Voitures</h1>
 </header>
