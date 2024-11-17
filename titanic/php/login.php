@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
 			$_SESSION['telephone'] = $user['telephone'];
 			$_SESSION['id_client'] = $user['id_client'];
         } else {
-            header("Location: Acce.php");
+            header("Location:home.php");
 			session_start(); // Rediriger vers la page utilisateur
 			$_SESSION['id_client'] = $user['id_client'];
         }
