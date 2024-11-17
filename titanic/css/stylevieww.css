@@ -1,0 +1,105 @@
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    /* Gris clair */
+    color: #333;
+    padding: 20px;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Container principal */
+.container {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #39b54a;
+}
+
+/* En-tête de la page */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #39b54a;
+    /* Couleur bleu comme Avito */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Section des détails de la voiture */
+.car-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    height: 100%;
+}
+
+/* Image de la voiture */
+.car-image {
+    width: 80%;
+}
+
+.car-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.car-infos{
+    width: 20%;
+    height: 100%;
+}
+
+
+/* Informations sur la voiture */
+
+
+.car-details strong {
+    color: #39b54a;
+    /* Bleu pour les labels */
+}
+
+
+
+
+
+/* Responsive pour petits écrans */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .car-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .car-details h2 {
+        text-align: center;
+    }
+
+    .car-image {
+        max-width: 100%;
+    }
+
+    .cta-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

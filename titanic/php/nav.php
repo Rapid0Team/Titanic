@@ -3,10 +3,10 @@
 <div class="nav sm:w-full w-full p-2 bg-black text-white flex fixed justify-between items-center top-0 z-10">
     <a href="home.php"><img src="../image/logo.jpg" alt="logo" class="w-32 rounded-3xl h-16"></a>
     <ul class="hidden md:flex gap-7 about text-xl">
-        <li><a href="info.php" >About</a></li>
-        <li><a href="home.php#help" >Help</a></li>
-        <li><a href="home.php#Contact" >Contact Us</a></li>
-        <li><a href="#catalogue">Products</a></li>
+        <li><a href="home.php" >Acceuil</a></li>
+        <li><a href="home.php#Contact" >Contactez Nous</a></li>
+        <li><a href="about.php" >A propos</a></li>
+        <li><a href="Catalogue.php">Catalogue</a></li>
     </ul>
     <div class="hidden md:flex items-center space-x-2">
         <button class="bg-slate-800 text-white rounded-full px-4 py-1 hover:bg-slate-700">
@@ -37,10 +37,10 @@
             </a>
         </li>
         
-        <li class="mt-4 w-full p-3 rounded-lg  text-xl text-center hover:bg-gray-600"><a href="#">About</a></li>
-        <li class="mt-4 p-3 rounded-lg  text-xl hover:bg-gray-600"><a class="w-full" href="#">Help</a></li>
-        <li class="mt-4 p-3 rounded-lg  text-xl hover:bg-gray-600"><a href="#Contact">Contact Us</a></li>
-        <li class="mt-4 p-3 rounded-lg  text-xl hover:bg-gray-600"><a href="#">Products</a></li>
+        <li class="mt-4 w-full p-3 rounded-lg  text-xl text-center hover:bg-gray-600"><a href="home.php">Acceuil</a></li>
+        <li class="mt-4 w-full p-3 rounded-lg  text-xl text-center hover:bg-gray-600"><a href="home.php#Contact">Contactez Nous</a></li>
+        <li class="mt-4 p-3 rounded-lg  text-xl hover:bg-gray-600"><a class="w-full" href="about.php">A propos</a></li>
+        <li class="mt-4 p-3 rounded-lg  text-xl hover:bg-gray-600"><a href="Catalogue.php">Catalogue</a></li>
         <div class=" botn  absolute bottom-0 ml-4 sup">
         <li class="mt-6 pl-5 pr-5 pt-2 pb-2 rounded-full text-xl border-white border-2 hover:text-black hover:bg-gray-300"><a class="text-2xl font-bold" href="sign-up.php">Sign up</a></li>
         <li class="mt-4 text-xl pl-5 pr-5 pt-2 pb-2 rounded-full border-white bg-white text-black  border-2 hover:bg-black hover:text-white"><a href="login.php" class="text-2xl font-bold">Sign up</a></li>
