@@ -14,7 +14,7 @@
                 if(empty($_SESSION['id_client'])){
                     echo "<a href='sign-up.php'>Inscrire</a>";
                 }else{
-                    echo "<a href='#'>mon profile</a>";
+                    echo "<a href='profil.php'>mon profile</a>";
                 }
             ?>
             
