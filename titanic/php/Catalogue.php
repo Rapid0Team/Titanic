@@ -1,5 +1,6 @@
 <?php
-include "nav.php"
+session_start();
+include "nav.php";
 ?>
 <?php
 include "connect.php";
