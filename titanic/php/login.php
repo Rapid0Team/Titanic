@@ -40,6 +40,7 @@ if (isset($_POST['submit'])) {
         $client = mysqli_fetch_assoc($result);
         
         // Vérification du rôle
+
         if ($client['role'] === 'admin' ) {
             header("Location: admin.php");// Rediriger vers la page d'administration
 			session_start();

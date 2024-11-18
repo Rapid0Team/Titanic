@@ -10,10 +10,24 @@
     </ul>
     <div class="hidden md:flex items-center space-x-2">
         <button class="bg-slate-800 text-white rounded-full px-4 py-1 hover:bg-slate-700">
-            <a href="sign-up.php">Sign up</a>
+            <?php 
+                if(empty($_SESSION['id_client'])){
+                    echo "<a href='sign-up.php'>Inscrire</a>";
+                }else{
+                    echo "<a href='#'>mon profile</a>";
+                }
+            ?>
+            
         </button>
         <button class="bg-slate-800 text-white rounded-full px-4 py-1 hover:bg-slate-700">
-            <a href="login.php">Log in</a>
+        <?php 
+                if(empty($_SESSION['id_client'])){
+                    echo "<a href='login.php'>Connection</a>";
+                }else{
+                    echo "<a href='logout.php'>Déconnection</a>";
+                }
+            ?>
+            
         </button>
     </div>
     <div class="md:hidden cursor-pointer" onclick="showSide()">

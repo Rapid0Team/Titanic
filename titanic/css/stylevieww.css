@@ -25,6 +25,7 @@ body {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px #39b54a;
+    user-select: none;
 }
 
 /* En-tête de la page */
@@ -65,41 +66,100 @@ header h1 {
     height: 100%;
 }
 
+.car-infos h2{
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.car-infos p{
+    margin-bottom: 1em;
+}
+
+.color{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
 
 /* Informations sur la voiture */
 
 
-.car-details strong {
+.car-infos strong {
     color: #39b54a;
     /* Bleu pour les labels */
 }
 
+.btn{
+    text-align: center;
+    width: 100%;
+    margin-top: 3em;
+}
+.btn a{
+    text-decoration: none;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    border: 2px solid #333;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: .6s ease;
+}
+
+.btn a:hover{
+    background: #333;
+    color: #fff;
+    border: 2px solid #fff;
+}
 
 
 
-
-/* Responsive pour petits écrans */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+    /* Container principal */
     .container {
-        width: 90%;
-        padding: 15px;
+        width: 95%;
+        padding: 20px;
     }
 
+    /* Section des détails de la voiture */
     .car-details {
         flex-direction: column;
         align-items: center;
     }
 
-    .car-details h2 {
-        text-align: center;
-    }
-
+    /* Image de la voiture */
     .car-image {
-        max-width: 100%;
+        width: 100%;
     }
 
-    .cta-btn {
+    .car-infos {
         width: 100%;
         text-align: center;
     }
+
+    .color {
+        justify-content: center;
+    }
+
+    /* Bouton */
+    .btn {
+        margin-top: 2em;
+    }
+
+    .btn a {
+        padding: 10px;
+        font-size: 0.9em;
+    }
 }
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .btn a {
+        font-size: 0.8em;
+        padding: 8px 15px;
+    }
+}
+

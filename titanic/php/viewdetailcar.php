@@ -26,7 +26,7 @@ $car = mysqli_fetch_assoc($result);
 
         <div class="car-details">
             <div class="car-image">
-                <img src="<?= $car['photo'] ?>" alt="<?= $car['photo'] ?>">
+                <img src="<?= $car['photo'] ?>" alt="image.jpg">
             </div>
             <div class="car-infos">
                 <h2><?php echo htmlspecialchars($car['model'] . " " . $car['marque']); ?></h2>
@@ -36,11 +36,14 @@ $car = mysqli_fetch_assoc($result);
                 <p><strong>Kilométrage :</strong> <?= $car['kilometre'] ?></p>
                 <p><strong> Etat/Région :</strong> <?= $car['etat_region'] ?></p>
                 <p><strong>Prix :</strong> <?php echo htmlspecialchars($car['prix']); ?>DH</p>
-                <p>
+                <div class="color">
                     <strong>Couleur :</strong>
                     <div style="width: 30px; height: 30px; border-radius: 50%; background-color:<?= $car['couleur'] ?>;"></div>
-                </p>
+</div>
                 <p><strong>Description :</strong><?= $car['Commentaires_Notes'] ?></p>
+                <div class="btn">
+                    <a href="Catalogue.php">Revenir</a>
+                </div>
             </div>
 
 

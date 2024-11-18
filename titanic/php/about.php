@@ -1,59 +1,43 @@
     <?php
-    include "nav.php"
+    session_start();
+    include "nav.php";
     ?>
-<?php 
-    include 'connect.php';
-    $query = "SELECT * from cars";
-    $result = mysqli_query($con, $query);
-    $cars = mysqli_fetch_all($result, MYSQLI_ASSOC);
-?>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magasin de Voitures</title>
-    <link rel="stylesheet" href="../css/infos.css">
-</head>
-<body>
-<header>
-    <h1>Magasin de Voitures</h1>
-</header>
+    <!DOCTYPE html>
+    <html lang="fr">
 
-<main>
-    <section id="info-magasin">
-        <h2>À propos de nous</h2>
-        <p>Bienvenue dans notre magasin de voitures, votre destination pour les voitures de luxe et de haute performance.</p>
-    </section>
-    <section id="voitures">
-        <h2>Nos Voitures</h2>
-        <?php foreach($cars as $car): ?>
-        <div class="car-card">
-            <img src="<?= $car['photo'] ?>" alt="Voiture 1">
-            <h3>Modèle : <?= $car['model'] ?></h3>
-            <p>Prix: <?= $car['prix']?>DH</p>
-            <p>Type de moteur: <?= $car['type_moteur'] ?></p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Magasin de Voitures</title>
+        <link rel="stylesheet" href="../css/infoss.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <h1>À Propos de Titanic Auto</h1>
+            </header>
+            <main>
+                <div class="photo">
+                    <img src="../image/photo.jpg" alt="photo">
+                </div>
+                <div class="propos">
+                    <p>
+                        Bienvenue chez <span>Titanic Auto</span> , votre destination de confiance pour tout ce qui concerne l’automobile. Chez <span>Titanic Auto</span>, nous sommes engagés à fournir des services, des produits et des solutions automobiles de première qualité, adaptés à vos besoins. Que vous recherchiez des réparations expertes, des pièces de qualité supérieure ou des conseils professionnels, nous sommes là pour vous.
+
+                        Avec une passion pour l’excellence et une dévotion à la satisfaction client, <span>Titanic Auto</span> se distingue comme un partenaire fiable pour les passionnés d’automobile et les conducteurs du quotidien. Notre équipe de professionnels qualifiés travaille sans relâche pour garantir que votre véhicule fonctionne au meilleur de ses performances, en alliant technologie de pointe et expertise inégalée.
+                        
+                    </p>
+                </div>
+            </main>
+            <footer>
+                <p>&copy; 2024 Magasin de Voitures. Tous droits réservés.</p>
+            </footer>
         </div>
-        <?php endforeach ?>
-        
-    </section>
-    <section id="videos">
-        <h2>Vidéos de Présentation</h2>
-        <video controls width="400">
-            <source src="../image/video1.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture des vidéos.
-        </video>
-        <video controls width="400">
-            <source src="../image/video2.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture des vidéos.
-        </video>
-    </section>
-</main>
 
-<footer>
-    <p>&copy; 2024 Magasin de Voitures. Tous droits réservés.</p>
-</footer>
 
-</body>
-</html>
+
+    </body>
+
+    </html>
