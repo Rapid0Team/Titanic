@@ -48,6 +48,15 @@
 
 ---
 
+## 🛠️ Tech Stack
+
+- **Frontend**: [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+                [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+                [Tailwind CSS](https://tailwindcss.com/)
+- **Backend**:  [PHP](https://www.php.net/)
+- **Database**: [MySQL](https://www.mysql.com/)
+
+---
 
 ## ⚙️ Installation et configuration
 
