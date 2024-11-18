@@ -18,7 +18,7 @@
             <!-- Formulaire de l'utilisateur -->
 			<div class="form">
 				<div class="input-F-usr">
-					<input type="text" placeholder="Téléphone, l'email, ou Nom L'utilisation" class="input usrname" name="user" required>
+					<input type="text" placeholder="Téléphone, l'email, ou Nom L'utilisation" class="input usrname" name="client" required>
 				</div>
 				<div class="input-F-usr">
 					<input type="password" placeholder="Mot de passe" class="input" name="password" required>
@@ -30,30 +30,30 @@ if (isset($_POST['submit'])) {
     extract($_POST);
 
     // Requête pour vérifier les informations de connexion
-    $query = "SELECT * FROM client WHERE (username = '$user' OR telephone='$user' OR email='$user' OR cin='$user') AND password = '$password'";
+    $query = "SELECT * FROM client WHERE (username = '$client' OR telephone='$client' OR email='$client' OR cin='$client') AND password = '$password'";
     $result = mysqli_query($con, $query) or die("Erreur de requête");
 
     if (mysqli_num_rows($result) == 0) {
         echo "<p class='pErreur' style='color:red; text-align:center;'>Identifiant ou mot de passe sont incorrect</p>";
     } else {
         // Récupération des informations de l'utilisateur
-        $user = mysqli_fetch_assoc($result);
+        $client = mysqli_fetch_assoc($result);
         
         // Vérification du rôle
-        if ($user['role'] === 'admin' ) {
+        if ($client['role'] === 'admin' ) {
             header("Location: admin.php");// Rediriger vers la page d'administration
 			session_start();
-			$_SESSION['nom_complet'] = $user['nom_complet'];
-			$_SESSION['username'] = $user['username'];
-			$_SESSION['cin'] = $user['cin'];
-			$_SESSION['age'] = $user['age'];
-			$_SESSION['email'] = $user['email'];
-			$_SESSION['telephone'] = $user['telephone'];
-			$_SESSION['id_client'] = $user['id_client'];
+			$_SESSION['nom_complet'] = $client['nom_complet'];
+			$_SESSION['username'] = $client['username'];
+			$_SESSION['cin'] = $client['cin'];
+			$_SESSION['age'] = $client['age'];
+			$_SESSION['email'] = $client['email'];
+			$_SESSION['telephone'] = $client['telephone'];
+			$_SESSION['id_client'] = $client['id_client'];
         } else {
             header("Location:home.php");
 			session_start(); // Rediriger vers la page utilisateur
-			$_SESSION['id_client'] = $user['id_client'];
+			$_SESSION['id_client'] = $client['id_client'];
         }
         exit();
     }
