@@ -68,10 +68,10 @@
 Pour toute demande de renseignements, commentaires ou assistance, n'hésitez pas à nous contacter :
 
 - **Chef de projet** : Mohamed BELKAHLA  
-  E-mail : [john.doe@example.com](mailto:belkahlam2005@gmail.com)
+  E-mail : [belkahlam2005@gmail.com](mailto:belkahlam2005@gmail.com)
 
 - **Responsable front-end** : Mouad Lamsila  
-  E-mail : [john.doe@example.com](mailto:mouadlamsila@gmail.com)
+  E-mail : [mouadlamsila@gmail.com](mailto:mouadlamsila@gmail.com)
 
 - **Problèmes GitHub** : vous pouvez également soumettre un problème sur ce référentiel à l'adresse [GitHub Issues](https://github.com/your-repo/issues).
 
