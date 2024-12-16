@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Se Connecter</title>
-	<link rel="stylesheet" href="../css/login.css">
+	<link rel="stylesheet" href="../css/Login.css">
 </head>
 <body>
   <!-- la classe qui contient tout -->
@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
         // Vérification du rôle
 
         if ($client['role'] === 'admin' ) {
-            header("Location: admin.php");// Rediriger vers la page d'administration
+            header("Location: editAdmin.php");// Rediriger vers la page d'administration
 			session_start();
 			$_SESSION['nom_complet'] = $client['nom_complet'];
 			$_SESSION['username'] = $client['username'];

@@ -17,7 +17,7 @@
 body{
 	background-image: url();
 	font-size: 14px;
-	background-image: url("../image/logo.jpg");
+	background-color: black;
 	background-repeat: no-repeat;
 	background-size: cover;
 }

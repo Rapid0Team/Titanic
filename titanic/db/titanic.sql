@@ -26,6 +26,7 @@ CREATE TABLE cars(
     model varchar(50),
     annee int(3),
     vin varchar(50) UNIQUE,
+    prix int(3),
     type_moteur varchar(50),
     transmission varchar(50),
     couleur varchar(50),
@@ -37,4 +38,22 @@ CREATE TABLE cars(
     Commentaires_Notes varchar(50),
     photo varchar(50));
     
+
+    INSERT INTO `cars`(`id_cars`, `marque`, `model`, `annee`, `vin`, `prix`, `type_moteur`, `transmission`, `couleur`, `kilometre`, `nom_proprietaire`, `numero_plaque`, `etat_region`, `statut_actuel`, `Commentaires_Notes`, `photo`) 
+                  VALUES (null, 'FIAT', 'AZERT', '1999', 'gergn', '20000', 'SPORT', 'LICENCE', 'red', '45', 'AZER', 'A22B33', 'RABAT', 'MANUEL', 'TRES BONNE VOITURE', '../photosCars/CAR1.jpg');
+
+    INSERT INTO `cars`(`id_cars`, `marque`, `model`, `annee`, `vin`, `prix`, `type_moteur`, `transmission`, `couleur`, `kilometre`, `nom_proprietaire`, `numero_plaque`, `etat_region`, `statut_actuel`, `Commentaires_Notes`, `photo`) 
+                  VALUES (null, 'FIAT', 'AZEeRT', '1999', 'Agergergn', '20000', 'SPORT', 'LICENCE', 'red', '45', 'AZER', 'A22B33', 'RABAT', 'MANUEL', 'TRES BONNE VOITURE', '../photosCars/CAR2.jpg');
+
+
+    INSERT INTO `cars`(`id_cars`, `marque`, `model`, `annee`, `vin`, `prix`, `type_moteur`, `transmission`, `couleur`, `kilometre`, `nom_proprietaire`, `numero_plaque`, `etat_region`, `statut_actuel`, `Commentaires_Notes`, `photo`) 
+                  VALUES (null, 'FIAT', 'AZEtRT', '1999', 'gehfgfTRin', '20000', 'SPORT', 'LICENCE', 'red', '45', 'AZER', 'A22B33', 'RABAT', 'MANUEL', 'TRES BONNE VOITURE', '../photosCars/CAR3.jpg');
+
+    INSERT INTO `cars`(`id_cars`, `marque`, `model`, `annee`, `vin`, `prix`, `type_moteur`, `transmission`, `couleur`, `kilometre`, `nom_proprietaire`, `numero_plaque`, `etat_region`, `statut_actuel`, `Commentaires_Notes`, `photo`) 
+                  VALUES (null, 'FIAT', 'AZEyRT', '1999', 'ykYin', '20000', 'SPORT', 'LICENCE', 'red', '45', 'AZER', 'A22B33', 'RABAT', 'MANUEL', 'TRES BONNE VOITURE', '../photosCars/CAR4.jpg');
+
+
+    INSERT INTO `cars`(`id_cars`, `marque`, `model`, `annee`, `vin`, `prix`, `type_moteur`, `transmission`, `couleur`, `kilometre`, `nom_proprietaire`, `numero_plaque`, `etat_region`, `statut_actuel`, `Commentaires_Notes`, `photo`) 
+                  VALUES (null, 'FIAT', 'AZEdRT', '1999', 'ukdRin', '20000', 'SPORT', 'LICENCE', 'red', '45', 'AZER', 'A22B33', 'RABAT', 'MANUEL', 'TRES BONNE VOITURE', '../photosCars/CAR5.jpg');
+                  
     

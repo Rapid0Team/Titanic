@@ -8,7 +8,7 @@
 
 /* Style du corps de la page pour le centrage et l'affichage */
 body {
-    background-image: url("../image/logo.jpg");
+   background-color: black;
 	background-repeat: no-repeat;
 	background-size: cover;
     
